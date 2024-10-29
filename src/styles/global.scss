@@ -1,0 +1,48 @@
+// Chứa các style toàn cục và import các file SCSS
+@import "mixins";
+@import "variables";
+@import "placeholders";
+// Định nghĩa style chung cho toàn bộ trang web
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color;
+}
+
+button {
+  @include button-style($primary-color, #fff);
+}
+
+.container {
+  @extend %flex-center;
+  padding: $padding-default;
+}
+.ml-190 {
+  margin-left: 190px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.img-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $border-color;
+  cursor: pointer;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

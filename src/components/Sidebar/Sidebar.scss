@@ -1,0 +1,44 @@
+@import "../../styles/global.scss";
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 465px;
+  background-color: $background-color;
+  .nav-link {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .active {
+    background-color: #797d81; /* Đổi màu nền */
+    color: #000 !important; /* Đổi màu chữ */
+    border-radius: 5px; /* Tùy chọn để làm mịn các góc */
+  }
+
+  .logo {
+    margin-bottom: 22px;
+  }
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+    .nav-link {
+      @include text-link(14px, 18px);
+      padding: 10px 9px 10px 15px;
+      gap: 10px;
+      span {
+        font-weight: 400;
+        line-height: 18px;
+      }
+      img {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

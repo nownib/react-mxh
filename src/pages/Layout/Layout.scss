@@ -1,0 +1,8 @@
+@import "../../styles/global.scss";
+
+.main-wrap {
+  .outlet {
+    width: calc(100% - 190px);
+    background-color: $background-color-2;
+  }
+}

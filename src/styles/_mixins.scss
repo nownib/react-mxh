@@ -1,0 +1,80 @@
+// Chứa các mixin toàn cục
+// _mixins.scss
+@mixin button-style($bg-color, $font-color) {
+  background-color: $bg-color;
+  color: $font-color;
+  padding: 10px 20px;
+  border-radius: $border-radius-default;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+@mixin text-link($font-size, $line-height) {
+  color: $text-link-color;
+  text-decoration: none;
+  line-height: $line-height;
+  font-size: $font-size;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: 0 4px 8px $color;
+}
+
+@mixin title($font-size) {
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  font-size: $font-size;
+  color: #000;
+}
+
+@mixin group-input() {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: $background-color-input;
+  outline: none;
+  border: none;
+  // &:focus {
+  //   color: red;
+  // }
+  &::placeholder {
+    font-size: 14px;
+    color: $text-link-color;
+  }
+}
+
+@mixin search-bar() {
+  position: relative;
+  width: 343px;
+  height: 40px;
+  background-color: $background-color-input;
+  border-radius: 12px;
+  user-select: none;
+  border: 1px solid $border-color;
+}
+
+@mixin notification-badge($backround-color) {
+  position: absolute;
+  top: 0;
+  left: 11.5px;
+  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  background-color: $backround-color;
+  color: white;
+  border-radius: 50%;
+  line-height: 2;
+  @extend %flex-center;
+}

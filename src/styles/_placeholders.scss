@@ -1,0 +1,12 @@
+// Định nghĩa các placeholder toàn cục
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
